@@ -1,0 +1,16 @@
+{% if dept1_list %}
+    <table border ='3'>
+        <tr>
+            <th> 본부 번호 </th>
+            <th> 본부 명 </th>
+            <th> 관리자 성명 </th>
+        </tr>
+        {% for info in dept1_list %}
+        <tr>
+            <td><a href = "/dept/dept2/{{ info.pk }}/">{{ info.head_num }}</a></td>
+            <td>{{ info.headquarters }}</td>
+            <td>{{ info.head_man }}</td>
+        </tr>
+        {% endfor %}
+</table>
+{% endif %}

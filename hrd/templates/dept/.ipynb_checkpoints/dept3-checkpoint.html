@@ -1,0 +1,18 @@
+{% if dept1_list %}
+    <table border ='3'>
+        <tr>
+            <th> 사번 </th>
+            <th> 이름 </th>
+            <th> 팀 번호 </th>
+            <th> 직급 업무 </th>
+        </tr>
+        {% for info in dept3_list %}
+        <tr>
+            <td>{{ info.em_id }}</td>
+            <td>{{ info.em_name }}</td>
+            <td>{{ info.team_num }}</td>
+            <td>{{ info.position }}</td>
+        </tr>
+        {% endfor %}
+</table>
+{% endif %}
