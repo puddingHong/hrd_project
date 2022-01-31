@@ -12,7 +12,7 @@ def index_dept2(request, head_num):
     context = {'dept2_list' : dept2_list }
     return render(request, 'dept/dept2_list.html', context)
 
-def index_dept3(request, team_num_id):
-    dept3_list = dept2.objects.filter('em_id', pk = team_num_id)
+def index_dept3(request, team_num):
+    dept3_list = dept2.objects.filter(team_num = team_num)
     context = {'dept3_list' : dept3_list }
     return render(request, 'dept/dept3_list.html', context)
